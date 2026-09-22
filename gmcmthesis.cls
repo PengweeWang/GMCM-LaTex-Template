@@ -438,29 +438,28 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
   %\setcounter{page}{0}
   %\def\thepage{0}
 
- \begin{center}
- {\includegraphics{logo}}
+         \begin{center}
+  {\includegraphics{logo}}
 
-  \vskip1.5cm
- {\zihao{2} \gmcm@ges@string@contents \par}
- \end{center}
+   \vskip41.0pt
+  \makebox[\textwidth][c]{\includegraphics{figures/title.pdf}}
+  \end{center}
 
- \vskip4em
+   \vskip3.85em\vskip9.8pt
 
- % \thispagestyle{gmcmheadings}
- \renewcommand\arraystretch{1.5}
- %\noindent 
- \begin{tabularx}{\textwidth-40pt}{lX}
-  \zihao{-2}\bfseries 学\qquad 校&\zihao{-2}\bfseries\gmcm@tokens@schoolname\\
-  \Xhline{1.2pt}\\
-  \zihao{-2}\bfseries 参赛队号&\zihao{-2}\bfseries\gmcm@tokens@baominghao\\
-  \Xhline{1.2pt}\\[-15pt]
-   \multirow{3}{*}{\zihao{-2}\bfseries 队员姓名}&\zihao{-2}\bfseries   1. \gmcm@tokens@membera\hfill\null\\
-   \cline{2-2}\\[-15pt]
-                               &\zihao{-2}\bfseries 2. \gmcm@tokens@memberb\hfill\null\\
-   \cline{2-2}\\[-15pt]
-                        &\zihao{-2}\bfseries 3.  \gmcm@tokens@memberc\hfill\null\\
-   \Xhline{1.2pt}
+  \renewcommand\arraystretch{1.0}
+  \noindent\centering
+  \begin{tabularx}{417.8pt}{@{}p{92.04pt}@{}X@{}}
+   \rule[-4.5pt]{0pt}{24.5pt}\zihao{-2}\bfseries\hspace{4.8pt}学\hspace{36.1pt}校 & \zihao{-2}\bfseries\gmcm@tokens@schoolname \\
+   \Xhline{1.44pt}
+   \rule[-4.5pt]{0pt}{55.5pt}\zihao{-2}\bfseries\centering 参赛队号 & \zihao{-2}\bfseries\gmcm@tokens@baominghao \\
+   \Xhline{1.44pt}
+   \rule[-4.5pt]{0pt}{30.1pt}                                 & \zihao{-2}\bfseries\hspace{5.4pt}1. \gmcm@tokens@membera\hfill\null \\
+   \Xcline{2-2}{0.96pt}
+   \rule[-4.5pt]{0pt}{30.9pt}\zihao{-2}\bfseries\centering 队员姓名 & \zihao{-2}\bfseries\hspace{5.4pt}2. \gmcm@tokens@memberb\hfill\null \\
+   \Xcline{2-2}{0.96pt}
+   \rule[-4.5pt]{0pt}{30.7pt}                                 & \zihao{-2}\bfseries\hspace{5.4pt}3. \gmcm@tokens@memberc\hfill\null \\
+   \Xhline{1.44pt}
   \end{tabularx}
 
   \fi % 结束封面条件；摘要标题页在两种模式下都生成。
@@ -473,21 +472,20 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \pdfbookmark[1]{标~题}{title}
 \setcounter{page}{1}
 \begin{center}
-%{\includegraphics[width=4cm]{logo}}
 {\zihao{2} \gmcm@ges@string@contents \par}
 \end{center}
 
 \vskip0.6cm%
 
 \begin{center}
-    {\zihao{-2}\lishu 题\quad 目：}
-    \underline{
-        \makebox[0.75\textwidth][c]{
-            \zihao{3}\heiti \@title
-        }
-    }
+  \makebox[\textwidth][c]{%
+    \makebox[0pt][r]{\zihao{-2}\lishu 题\quad 目：\hspace{0.5em}}%
+    \underline{\makebox[25em][c]{\rule[-4.5pt]{0pt}{20pt}\zihao{3}\heiti \@title}}%
+    \makebox[0pt][l]{\hspace{0.5em}\phantom{\zihao{-2}\lishu 题\quad 目：}}%
+  }
 \end{center}
-\vskip0.2cm%
+
+\vskip0.4cm%
 }
 
 
